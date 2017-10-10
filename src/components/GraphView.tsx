@@ -24,7 +24,7 @@
 */
 
 import React from 'react';
-import d3 from 'd3';
+import d3, { ZoomTransform } from 'd3';
 
 import Radium from 'radium';
 
@@ -226,7 +226,7 @@ interface IGraphViewProps {
 }
 
 interface IGraphViewState {
-  viewTransform: d3.ZoomTransform;
+  viewTransform: ZoomTransform;
   selectionChanged?: boolean;
   selectionType?: SelectionType;
   readOnly?: boolean;

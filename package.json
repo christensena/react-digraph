@@ -11,6 +11,9 @@
     "graph",
     "digraph"
   ],
+  "private": true,
+  "main": "lib/index.js",
+  "types": "src/index.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/uber/react-digraph.git"
@@ -22,8 +25,7 @@
   "engines": {
     "node": ">= 0.10.0"
   },
-  "licenses": "MIT",
-  "main": "dist/index.js",
+  "license": "MIT",
   "peerDependencies": {
     "d3": "^4.1.1",
     "radium": "^0.18.1",
@@ -60,9 +62,14 @@
     "react-icons": "^2.2.1",
     "sinon": "^1.17.6",
     "tape": "^4.0.0",
-    "typescript": "^2.5.3"
+    "ts-loader": "^2.3.7",
+    "typescript": "^2.5.3",
+    "webpack": "^3.6.0"
   },
   "scripts": {
+    "clean": "rimraf lib",
+    "build-ts": "yarn run clean && webpack -p",
+    "build-ts:watch": "yarn run clean && webpack -w",
     "build": "rm -rf dist && babel src -d dist --copy-files -s",
     "build-example": "browserify dist/examples/graph.js > dist/examples/graph-example.js",
     "prebuild-example": "npm run build",
