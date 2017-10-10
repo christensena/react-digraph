@@ -25,18 +25,17 @@
   "licenses": "MIT",
   "main": "dist/index.js",
   "peerDependencies": {
-    "react": "^15.3.1",
-    "react-dom": "^15.3.1",
     "d3": "^4.1.1",
     "radium": "^0.18.1",
+    "react": "^15.3.1",
+    "react-dom": "^15.3.1",
     "react-icons": "^2.2.1"
   },
   "devDependencies": {
-    "react": "^15.3.1",
-    "react-dom": "^15.3.1",
-    "d3": "^4.1.1",
-    "radium": "^0.18.1",
-    "react-icons": "^2.2.1",
+    "@types/d3": "^4.10.1",
+    "@types/node": "^8.0.33",
+    "@types/radium": "^0.18.23",
+    "@types/react": "^16.0.10",
     "babel-cli": "^6.6.5",
     "babel-istanbul": "^0.8.0",
     "babel-plugin-transform-object-assign": "^6.8.0",
@@ -45,6 +44,7 @@
     "babel-preset-stage-2": "^6.3.0",
     "browserify": "^13.1.0",
     "build-changelog": "^2.1.2",
+    "d3": "^4.1.1",
     "enzyme": "^2.5.1",
     "eslint": "^2.0.0",
     "eslint-plugin-es6-recommended": "^0.1.2",
@@ -53,9 +53,14 @@
     "jsdom": "^9.8.0",
     "nws": "^1.1.1",
     "opn-cli": "1.x",
+    "radium": "^0.18.1",
+    "react": "^15.3.1",
     "react-addons-test-utils": "^15.3.2",
+    "react-dom": "^15.3.1",
+    "react-icons": "^2.2.1",
     "sinon": "^1.17.6",
-    "tape": "^4.0.0"
+    "tape": "^4.0.0",
+    "typescript": "^2.5.3"
   },
   "scripts": {
     "build": "rm -rf dist && babel src -d dist --copy-files -s",
